@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Rock Paper Scissor</h1>
+  <script>
+    //create a variable userinput
+    //ask the user for rock paper scissor
+    let userInput = prompt("Enter Rock, Paper, Scissor");
+    //create a comp varialble and assign it the value of random.math multiply by 4 to generate random number between 1 to 3;
+    let comp = Math.floor(Math.random() * 4);
+    //creat a variable userInputCon;
+    let user = 0;
+    //convert the input to number and store it to userInputCon;
+    //if userinput is rock then store 1 to userInputCon
+    if(userInput == "Rock"){
+      user = 1;
+      //if userinput is paper then store 2 to userInputCon
+    } else if(userInput == "Paper"){
+      user = 2;
+      //if userinput is scissor then store 3 to userInputCon
+    } else if(userInput == "Scissor"){
+      user = 3;
+    }
+    //now compare comp variable with the userInputCon
+    //if comp is 1 and userInputcon is 1 then print draw
+    if(comp == 1 && user == 1){
+      console.log("Draw");
+    }
+    //if comp is 1 and userInputCon is 2 then print winner is user;
+    else if( comp == 1 && user == 2){
+      console.log("Winner is User");
+    }
+    //if comp is 1 and userInputcon is 3 then print winner is comp
+    else if(comp == 1 && user == 3){
+      console.log("Winner is Computer");
+    }
+    //if comp is 2 and userInputcon is 1 then print winner is comp
+    else if( comp == 2 && user == 1){
+      console.log("Winner is Computer");
+    }
+    // if comp is 2 and userInputCon is 2 then print draw;
+    else if( comp == 2 && user == 2){
+      console.log("Draw");
+    }
+    // if comp is 2 and userInputCon is 3 then print winner is user;
+
+    else if(comp == 2 && user == 3){
+      console.log("Winner is User");
+    }
+    //if comp is 3 and userInputCon is 3 then print draw;
+    else if(comp == 3 && user == 3){
+      console.log("Draw");
+    }
+    //if comp is 3 and userINputCon is 2 then print winner is comp
+    else if(comp == 3 && user == 2){
+      console.log("Winner is Computer");
+    }
+    //if comp is 3 and userInputcon is 1 then print winner is user;
+    else if ( comp == 3 && user == 1){
+      console.log("Winner is User");
+    }
+  </script>
+</body>
+</html>

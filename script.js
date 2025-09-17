@@ -1,18 +1,17 @@
-//create a function that returns rock paper or scissor
+
 function getComputerChoice(){
-    //create a variable named random and assign it the math.random function multiplied by 4 ;
+    //math.random gives us random number between .1 to .9 and so multiplying
+    //it with 4 gives us random number between 1 to 3;
+    //math.floor rounds off to closed integer
     let random = Math.floor(Math.random() * 4);
-    //compare value of random with 1
     if(random == 1){
         console.log("My choice : ROCK");
         return "ROCK";
     }
-    //compare value of random with 2
     else if ( random == 2){
         console.log("My choice : PAPER");
         return "PAPER";
     }
-    //compare value of random with 3
     else {
         console.log("My choice : SCISSOR");
         return "SCISSOR";
@@ -20,23 +19,18 @@ function getComputerChoice(){
 }
 
 
-//function that returns userinput
+
 function getHumanChoice(){
-    //create a variable that stores the userInput 
-    //ask the user for input;
     let userInput = prompt("Enter Rock or Paper or Scissor").toUpperCase();
     userInput.toString();
     console.log("Your choice : " + userInput);
-    //return the value of userInput;
     return userInput;
 }
 
 
-//variable to store scores
-//stores human score
 let humanScore = 0;
-//stores computer score
 let computerScore = 0;
+
 
 function playRound(humanChoice,computerChoice){
    if (humanChoice == "ROCK" && computerChoice == "ROCK"){

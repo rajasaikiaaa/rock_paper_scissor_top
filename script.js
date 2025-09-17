@@ -3,11 +3,20 @@ function getComputerChoice(){
     //create a variable named random and assign it the math.random function multiplied by 4 ;
     let random = Math.floor(Math.random() * 4);
     //compare value of random with 1
-    if(random == 1) return "ROCK";
+    if(random == 1){
+        console.log("My choice : ROCK");
+        return "ROCK";
+    }
     //compare value of random with 2
-    else if ( random == 2) return "PAPER";
+    else if ( random == 2){
+        console.log("My choice : PAPER");
+        return "PAPER";
+    }
     //compare value of random with 3
-    else return "SCISSOR";
+    else {
+        console.log("My choice : SCISSOR");
+        return "SCISSOR";
+    }
 }
 
 
@@ -16,7 +25,8 @@ function getHumanChoice(){
     //create a variable that stores the userInput 
     //ask the user for input;
     let userInput = prompt("Enter Rock or Paper or Scissor").toUpperCase();
-    console.log(userInput.toString());
+    userInput.toString();
+    console.log("Your choice : " + userInput);
     //return the value of userInput;
     return userInput;
 }
@@ -55,4 +65,25 @@ function playRound(humanChoice,computerChoice){
     console.log("You win! Scissor cuts Paper");
    }
 }
-playRound(getHumanChoice(),getComputerChoice());
+
+function playGame(){
+    const maxRound = 10;
+    for(let i=1; i<=maxRound; i++){
+        playRound(getHumanChoice(),getComputerChoice());
+        console.log("Round : " + i);
+        console.log(`Remaining Round : ${maxRound - i}`);
+        console.log("Your score : " + humanScore);
+        console.log("Computer Score : " + computerScore);
+        console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+    }
+
+    if(humanScore > computerScore){
+        console.log("Hurray! You are the Winner.");
+    } else {
+        console.log("Oh o! You are the loser. Try Again");
+    }
+
+    console.log("REFRESH FOR A NEW GAME!");
+}
+
+playGame();
